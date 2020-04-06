@@ -9,7 +9,8 @@
           ></app-add>
           <app-edit></app-edit>
           <app-list 
-           
+           [paymentList]="theList"
+           (deleteEvt)="deletePaymentItem($event)"
           ></app-list>
         </div>
 
