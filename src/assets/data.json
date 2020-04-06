@@ -1,0 +1,22 @@
+[
+    {
+      "paymentValue": "Chip",
+      "paymentDate": "2018-12-1 8:45"
+    },
+    {
+      "paymentValue": "Tibbs",
+      "paymentDate": "2018-12-2 13:30"
+    },
+    {
+      "paymentValue": "Stich",
+      "paymentDate": "2018-12-2 10:15"
+    },
+    {
+      "paymentValue": "Shadow",
+      "paymentDate": "2018-12-2 15:00"
+    },
+    {
+      "paymentValue": "Nugget",
+      "paymentDate": "2018-12-2 9:00"
+    }
+  ]
