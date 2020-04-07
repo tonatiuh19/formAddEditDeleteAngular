@@ -1,0 +1,23 @@
+<div class="item-list mb-3">
+    <div class="col media py-3"
+      *ngFor="let item of paymentList">
+      <div class="mr-3">
+        <button class="btn btn-sm btn-danger"
+            (click)="handleDelete(item)"
+        >X</button>
+
+      </div><!-- media-left -->
+  
+      <div class="media-body">
+        <div class="d-flex">
+          <span class="payment-value-item" contenteditable="true">{{item.paymentValue | currency}}</span>
+          <span class="payment-date ml-auto">{{item.paymentDate | date: 'M/d h:mm a'}}</span>
+        </div>
+  
+        
+      </div>
+      <!--Incomplete<button class="btn btn-sm btn-primary"
+            (click)="handleEdit(item)"
+        >edit</button>-->
+    </div>
+  </div>

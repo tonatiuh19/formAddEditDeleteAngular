@@ -1,0 +1,54 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add Payment
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Payment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="paymentForm" novalidate 
+                (ngSubmit)="handleAdd(paymentForm.value)"
+                #paymentForm="ngForm"
+            >
+              <div class="form-group form-row">
+                <label class="col-md-2 col-form-label text-md-right" for="paymenyName">Payment Value</label>
+                <div class="col-md-10">
+                  <input type="text" class="form-control number" name="paymentValue" id="paymentName" placeholder="00.00" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" ngModel>
+                </div><!-- col-md-10 --> 
+              </div><!-- form-group --> 
+        
+              <div class="form-group form-row">
+                <label class="col-md-2 col-form-label text-md-right" for="payDate">Date</label>
+                <div class="col-md-4">
+                  <input type="date" class="form-control" id="payDate" name="paymentDate" min="2020-04-01" ngModel>
+                </div><!-- col-md-4 --> 
+              </div><!-- form-group -->
+            
+              <div class="form-group form-row mb-0">
+                <div class="offset-md-2 col-md-10">
+                  <button type="submit" class="btn btn-primary d-block ml-auto"
+                  >Add Appointment</button>
+                </div><!-- col-md-offset-2 --> 
+              </div><!-- form-group -->
+        
+            </form>
+        </div>
+        <button id="closeModalButton" [hidden]="true" data-toggle="modal"        
+            data-target="#exampleModal" class="btn btn-default"                          
+            data-dismiss="modal">Close
+        </button>
+        <!--<div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>-->
+      </div>
+    </div>
+  </div>
