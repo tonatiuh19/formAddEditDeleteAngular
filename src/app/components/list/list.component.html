@@ -10,11 +10,14 @@
   
       <div class="media-body">
         <div class="d-flex">
-          <span class="pet-name" contenteditable="true">{{item.paymentValue}}</span>
-          <span class="apt-date ml-auto">{{item.paymentDate | date: 'd/M h:mm a'}}</span>
+          <span class="payment-value-item" contenteditable="true">{{item.paymentValue | currency}}</span>
+          <span class="payment-date ml-auto">{{item.paymentDate | date: 'M/d h:mm a'}}</span>
         </div>
   
         
       </div>
+      <!--Incomplete<button class="btn btn-sm btn-primary"
+            (click)="handleEdit(item)"
+        >edit</button>-->
     </div>
   </div>
